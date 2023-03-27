@@ -116,7 +116,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-
+	log.Printf("Proxy listening on %v", listenAddress)
 	http.Handle("/", proxy)
 	http.Handle("/metrics", promhttp.Handler())
 	log.Fatal(http.ListenAndServe(listenAddress, nil))
