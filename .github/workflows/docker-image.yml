@@ -25,5 +25,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: latest
+          tags: 3boxben/ipfs-metric-proxy:latest
           labels: ${{ steps.meta.outputs.labels }}
